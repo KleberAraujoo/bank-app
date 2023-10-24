@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" >
+    <title>Criar Conta Bancária</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Criar Conta Bancária</h1>
+        <form id="account-form">
+            <label for="account-number">Número da Conta (8 dígitos):</label>
+            <input type="text" id="account-number" pattern="\d{8}" required>
+            <label for="account-type">Tipo de Conta:</label>
+            <select id="account-type" required>
+                <option value="corrente">Conta Corrente</option>
+                <option value="poupanca">Conta Poupança</option>
+            </select>
+            <label for="agency">Agência (4 dígitos):</label>
+            <input type="text" id="agency" pattern="\d{4}" required>
+            <button type="button" onclick="createAccount()">Criar Conta</button>
+        </form>
+    </div>
+    <script src="bank.js"></script>
+</body>
+</html>
